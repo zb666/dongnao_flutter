@@ -36,4 +36,20 @@ void main() {
   print("??"+"左边为空的情况下  就使用右边的值作为返回: "+cq);
   //if 运算符号 同java 略
 
+  num x;
+  x = 1;
+
+  num y;
+  y = 2;
+
+  print("$x "+"$y");
+  //break continue 同java ，值得注意到是break终止的是其所在的for循环的语句中
+  showNum(x, y);
+
+
+}
+
+
+void showNum(num x,num y){
+  print("showNum $x $y");
 }
