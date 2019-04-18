@@ -7,3 +7,9 @@ class MyApp extends StatelessWidget {
     return Container();
   }
 }
+
+void main(){
+  var a= 'abc';
+  var length = a?.length;
+  print(length);
+}

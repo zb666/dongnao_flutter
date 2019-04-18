@@ -12,8 +12,13 @@ void main() async{
     print(list2);
 
     var asMap = list2.asMap();
-
     print(asMap);
+
+    var list3 = const[2,3,4];
+
+    var asMap2 = list3.asMap();
+    print(asMap2);
+    
 
 }
 

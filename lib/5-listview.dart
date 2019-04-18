@@ -16,15 +16,21 @@ class MyApp extends StatelessWidget {
 //        ),
 //      ),
 //    );
+
+
+    //generate加载的话 会一次性加载所有的数据，但是用build的方式 不会一次性进行数据的加载
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: AppBar(title: Text('ListView例子')),
-        ),
-        body: new HorListView(),
+        appBar: AppBar(title: AppBar(title: Text('ListView例子'))),
+//        body: HorListView(),
+        body: ListView.builder(itemBuilder: (context, index) {
+          return ListTile(
+            title: Text("title")
+          );
+        }),
       ),
     );
-    return HorListView();
+//    return HorListView();
   }
 }
 

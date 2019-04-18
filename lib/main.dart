@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -47,9 +48,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  Future getImage() async {
-
-  }
+  Future getImage() async {}
 
   void _incrementCounter() {
     setState(() {
@@ -145,7 +144,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //  }
 //}
 
-_getIpAddress() async{
+_getIpAddress() async {
   final url = 'https://httpbin.org/ip';
-
 }
