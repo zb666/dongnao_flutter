@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyHomePage());
+void main() => runApp(MyHomePage(title: "title"));
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -47,11 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text("title", textAlign: TextAlign.right)),
       body: RefreshIndicator(
-          child: ListView.builder(
-            itemBuilder: _renderRow,
-            itemCount: list.length + 1,
-            controller: _scrollController,
-          ),
+          child: ListView.builder(itemBuilder: _renderRow),
           onRefresh: _onRefresh),
     );
   }
@@ -88,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Widget _renderRow(BuildContext buildContext, int index) {
+  Widget _renderRow(BuildContext context, int index) {
 //    if (index < list.length) {
 //      return ListTile(title: Text("$list[index])"));
 //    }
